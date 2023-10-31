@@ -3,21 +3,33 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
+import SubredditProject from '../components/Project2/SubredditProject.jsx';
+
+
+
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
 		<ViewTransitions />
+		
+		
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Challenge yourself, get into the details, Improve</h1>
+			
+				<SubredditProject client:load/>
 			
 		</main>
 		<Footer />
 	</body>
 </html>
+
+
+
