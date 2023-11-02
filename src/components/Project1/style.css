@@ -20,6 +20,24 @@ body {
   border-radius: 2px;
 }
 
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+h5 {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 10%;
+  top: 20px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

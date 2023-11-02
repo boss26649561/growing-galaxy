@@ -1,5 +1,5 @@
-import { FaTimes } from "react-icons/fa";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const Task = ({ task, onDelete, onToggle }) => {
   return (
     <div
@@ -7,7 +7,13 @@ const Task = ({ task, onDelete, onToggle }) => {
       onDoubleClick={() => onToggle(task.id)}
     >
       <h5>
-        {task.text} <FaTimes onClick={() => onDelete(task.id)} />
+        {task.text}{" "}
+        <FontAwesomeIcon
+          icon={faXmark}
+          size="2xl"
+          className="icon"
+          onClick={() => onDelete(task.id)}
+        />
       </h5>
       <p>{task.day}</p>
     </div>
