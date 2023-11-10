@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
+import { ViewTransitions } from 'astro:transitions';
 
 type Props = CollectionEntry<'project'>['data'];
 
@@ -18,6 +18,7 @@ import App from "../components/Project1/TaskManager.jsx"
 <html lang="en">
 	<head>
 		<BaseHead title={projectname} description={description} />
+		<ViewTransitions />
 		<style>
 			
 		</style>
