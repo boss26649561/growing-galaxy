@@ -6,6 +6,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets'
+import dance from '../../public/dance.gif';
+
 ---
 
 <!doctype html>
@@ -17,14 +20,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>About me <img src="dance.gif" alt="dance" width={32} height={32}></h1>
+			<h1>About me <Image src= {dance} alt="dance" width={32} height={32}></h1>
 			
 			
 			<p>
 			Hi, I am Guan-Tse. A graduate in IT majoring in software development.
-			My exercising interests are BJJ, Bouldering and Calisthenics
 			</p>
-			<img src="handstand.png" alt="handstand" width={128} height={64}>
+				
 			<p>
 			This website/blog will be mainly used to showcase my current skillsets and other projects I am working on. Thank you for visiting and I hope you have a great day!
 			</p>

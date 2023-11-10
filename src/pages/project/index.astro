@@ -1,0 +1,47 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { ViewTransitions } from 'astro:transitions';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets'
+
+const posts = (await getCollection('project')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<ViewTransitions />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h2>Projects</h2>
+			<h3>See my most recent projects below to get an idea of my past experience</h3>
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							
+								<a href={`/project/${post.slug}/`}>
+									<Image width={600} height={600/1.5} src={post.data.Image} alt="" />
+									<h4 class="title">{post.data.projectname}</h4>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

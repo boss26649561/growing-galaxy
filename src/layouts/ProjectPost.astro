@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+
+type Props = CollectionEntry<'project'>['data'];
+
+const { projectname, description, tags, Component } = Astro.props;
+
+
+
+//import App from {Component};
+import App from "../components/Project1/TaskManager.jsx"
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={projectname} description={description} />
+		<style>
+			
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>{projectname}</h1>
+                <h3>Tags:{tags}</h1>
+					<App client:load/>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -3,7 +3,7 @@ title: "Everything about BJJ + BJJ diary"
 description: "Covers everything including hidden secrets"
 pubDate: "Oct 17 2023"
 updatedDate: "Nov 1 2023"
-heroImage: "/blue belt.jpg"
+Image: "../../content/Images/blue belt.jpg"
 ---
 
 ## Strengths

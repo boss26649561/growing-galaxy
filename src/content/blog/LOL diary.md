@@ -3,7 +3,7 @@ title: "League of legends Diary"
 description: "Covers everything including hidden secrets"
 pubDate: "Nov 1 2023"
 updatedDate: "Nov 1 2023"
-heroImage: "/Leagueoflegends.png"
+Image: "../../content/Images/Leagueoflegends.png"
 ---
 
 # Intro
@@ -23,7 +23,6 @@ Changing to red trinket on Ganking junglers (especially ivern)
 Skirmishing 2vs2 with weak laners
 
 Herald usage, better to use then over greeding
-
 
 # Improvement areas
 
