@@ -24,7 +24,6 @@ const project = defineCollection({
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       ImageURL: image(),
-      Component: z.string(),
     }),
 });
 

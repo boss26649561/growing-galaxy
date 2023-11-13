@@ -7,12 +7,8 @@ import { ViewTransitions } from 'astro:transitions';
 
 type Props = CollectionEntry<'project'>['data'];
 
-const { projectname, description, tags, Component } = Astro.props;
+const { projectname, description, tags} = Astro.props;
 
-
-
-//import App from {Component};
-import App from "../components/Project1/TaskManager.jsx"
 ---
 
 <html lang="en">
@@ -30,7 +26,7 @@ import App from "../components/Project1/TaskManager.jsx"
 			<article>
 				<h1>{projectname}</h1>
                 <h3>Tags:{tags}</h1>
-					<App client:load/>
+			<slot />		
 			</article>
 		</main>
 		<Footer />
