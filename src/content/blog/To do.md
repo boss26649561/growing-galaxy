@@ -10,9 +10,10 @@ ImageURL: "../../content/Images/To do.png"
 
 - Displaying Front Page with sliding images of blogs and projects
 - Better Color themes
-- Using tags
+- Adding a tag component to reuse
 - Better display layout for blog and project pages
-- Fixing up about page -> maybe add some tags
+- Fixing up the about page -> maybe add some tags
+- Fixing up components overlapping in the projects, CSS seems to carry to over from each other so when you open up the subreddit project, the first task manager project gets affected
 
 ## Lower Priority
 
